@@ -27,12 +27,13 @@ include "../settings/setting.php";
                                 <th><i class=" fa fa-edit"></i> Image</th>
                                 <th><i class=" fa fa-edit"></i> Slug</th>
                                 <th><i class=" fa fa-edit"></i> Date</th>
-                                <th><i class=" fa fa-edit"></i> Add</th>
+                                <th><i class=" fa fa-edit"></i> Actions</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
-                           <?php foreach ($getData as $key){ ?>
+                           <?php foreach ($getData as $key){
+//                               var_dump($key['id']);?>
                             <tr>
                                 <td>
                                     <a href="basic_table.html#"><?= $key['id'] ?></a>
@@ -43,12 +44,13 @@ include "../settings/setting.php";
                                 <td> <?= $key['slug'] ?></td>
                                 <td> <?= $key['created_at'] ?></td>
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i>1</button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                  <a  href="update_service.php?update_service_id=<?= $key['id'] ;?>">  <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+                                    <a onclick="return confirm('Are you sure?');" href="../settings/crud.php?delete_service_id=<?= $key['id'] ?>" >  <button class="btn btn-danger btn-xs" name="button" ><i class="fa fa-trash-o"></i></button></a>
                                 </td>
                             </tr>
-                           <?php } ?>
+
+                           <?php } ; ?>
                             </tbody>
                         </table>
                     </div>

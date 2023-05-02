@@ -10,15 +10,23 @@ function getInsert(string $tName,array $columnName,array $values): bool
     $sql = "INSERT INTO  $tName  (" . implode(',' , $columnName) .") VALUES (?, ? , ? , ? , ?, ?)";
 
     $insert = $conn->prepare($sql);
-    $insert->execute($values);
+    return $insert->execute($values);
 
-    return true;
+
 }
 
 function getUpdate(string $tName,array $columnName,array $values,int $id): bool
 {
+    global  $conn;
+    $sql = "UPDATE   $tName  SET ";
+    for($i=0; $i<count($columnName); $i++){
+        $sql.=' '.$columnName[$i].'=?,';
+    }
+    $sql = rtrim($sql,",");
+    $sql.=" WHERE id={$id}";
 
-    return true;
+    $insert = $conn->prepare($sql);
+    return $insert->execute($values);
 }
 
 function getData(string $tableName,$id=null){
@@ -31,22 +39,25 @@ function getData(string $tableName,$id=null){
         return $sth->fetchAll(\PDO::FETCH_ASSOC);
 
     }else{
-
+        $sql="SELECT * FROM $tableName WHERE id = $id";
+        $sth = $conn->prepare($sql);
+        $sth->execute();
+        return $sth->fetch(\PDO::FETCH_ASSOC);
     }
     return true;
 }
 
 function getDelete(string $tableName,int $id): bool
-{
+{    global  $conn;
     $query = $conn->prepare("DELETE FROM $tableName WHERE id = ?");
     return (bool)  $query->execute([$id]);
 }
 
-//$insert = getInsert('services',['name','image','title'],['sadiq','http','basliq']);
-//$update = getUpdate('services',['name','image','title'],['sadiq','http','basliq'],1);
-//$getData = getData('services');
-//$getData = getData('services',1);
-//$getDelete = getDelete('services',$_POST['id']);
+//$insert = getInsert('service',['name','image','title'],['sadiq','http','basliq']);
+//$update = getUpdate('service',['name','image','title'],['sadiq','http','basliq'],1);
+//$getData = getData('service');
+//$getData = getData('service',1);
+//$getDelete = getDelete('service',$_POST['id']);
 //if ($insert){
 //
 //}

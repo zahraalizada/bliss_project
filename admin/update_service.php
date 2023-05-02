@@ -1,4 +1,12 @@
-<?php include "admin_header.php"; ?>
+<?php include "admin_header.php";
+$page = "service";
+$id = $_GET['update_service_id'];
+include "../settings/setting.php";
+?>
+<?php
+$data = $getData;
+?>
+
 
 
 <section id="main-content">
@@ -10,12 +18,12 @@
             <div class="col-lg-12">
                 <div class="form-panel">
                     <form action="../settings/crud.php" class="form-horizontal style-form" method="post">
+
                         <div class="form-group">
-
-
+                            <input type="hidden" name="hidden" value="<?= $data['id'] ?>">
                             <label class="control-label col-md-3">Title</label>
                             <div class="col-md-3 col-xs-11">
-                                <input class="form-control form-control-inline input-medium default-date-picker" name="title" size="16" type="text" value="">
+                                <input class="form-control form-control-inline input-medium default-date-picker" name="title" size="16" type="text" value=" <?php echo $data['title'] ?>">
 
                             </div>
                         </div>
@@ -25,7 +33,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Content</label>
                             <div class="col-md-3 col-xs-11">
-                                <input class="form-control form-control-inline input-medium default-date-picker" name="content" size="16"  type="text" value="">
+                                <input class="form-control form-control-inline input-medium default-date-picker" name="content" size="16"  type="text" value="<?php echo $data['content'] ?>">
 
                             </div>
                         </div>
@@ -36,7 +44,7 @@
                         <div class="form-group">
                             <label class="control-label col-md-3">Slug</label>
                             <div class="col-md-3 col-xs-11">
-                                <input class="form-control form-control-inline input-medium default-date-picker" name="slug" size="16" type="text" value="">
+                                <input class="form-control form-control-inline input-medium default-date-picker" name="slug" size="16" type="text" value="<?php echo $data['slug'] ?>">
                             </div>
                         </div>
 
@@ -44,10 +52,12 @@
                             <label class="control-label col-md-3">Status</label>
                             <div class="radio">
                                 <label>
-                                    <input type="radio" name="status" id="status" value="0">0
+                                    <input type="radio" name="status" id="status" value="<?php echo $data['status'] ?>">
+                                    0
                                 </label>
                                 <label>
-                                    <input type="radio" name="status" id="status" value="1">1
+                                    <input type="radio" name="status" id="status" value="<?php echo $data['status'] ?>">
+                                   1
                                 </label>
                             </div>
 
@@ -79,7 +89,7 @@
                       </span>
                             </div>
                         </div>
-                        <a  ><button class="btn btn-primary me-3" name="add_service">Add</button></a>
+                        <a  ><button class="btn btn-primary me-3" name="update_service">Update</button></a>
                             </div>
                         </div>
 
