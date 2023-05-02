@@ -30,25 +30,28 @@ include "../settings/setting.php";
                                 <th><i class=" fa fa-edit"></i> Image</th>
                                 <th><i class=" fa fa-edit"></i> Slug</th>
                                 <th><i class=" fa fa-edit"></i> Date</th>
+                                <th><i class=" fa fa-edit"></i> Add</th>
                                 <th></th>
                             </tr>
                             </thead>
                             <tbody>
+                           <?php foreach ($getData as $key){ ?>
                             <tr>
                                 <td>
-                                    <a href="basic_table.html#">Company Ltd</a>
+                                    <a href="basic_table.html#"><?= $key['id'] ?></a>
                                 </td>
-                                <td class="hidden-phone">Lorem Ipsum dolor</td>
-                                <td>12000.00$</td>
-                                <td><span class="label label-info label-mini">Due</span></td>
+                                <td class="hidden-phone"><?= $key['title'] ?></td>
+                                <td><?= $key['content'] ?></td>
+                                <td><span class="label label-info label-mini"><?= $key['image'] ?></span></td>
+                                <td> <?= $key['slug'] ?></td>
+                                <td> <?= $key['created_at'] ?></td>
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i>1</button>
                                     <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                                     <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
                                 </td>
-                                <td> date</td>
                             </tr>
-
+                           <?php } ?>
                             </tbody>
                         </table>
                     </div>

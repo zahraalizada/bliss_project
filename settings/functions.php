@@ -22,7 +22,14 @@ function getUpdate(string $tName,array $columnName,array $values,int $id): bool
 }
 
 function getData(string $tableName,$id=null){
+    global  $conn;
+
     if ($id==null){
+        $sql="SELECT * FROM $tableName";
+        $sth = $conn->prepare($sql);
+        $sth->execute();
+        return $sth->fetchAll(\PDO::FETCH_ASSOC);
+
 
     }else{
 
