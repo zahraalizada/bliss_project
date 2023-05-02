@@ -46,8 +46,16 @@ include "../settings/setting.php";
                                     <td><span class="label label-info label-mini">Status 1</span></td>
                                     <td>
                                         <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+<!--                                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>-->
+                                        <a href="<?= "update_slider.php?update_slider_id=". $key['id'] ?>">
+                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></i>
+                                            </button>
+                                        </a>
+                                        <a onclick="return confirm('Are you sure?');"
+                                           href="<?= "../settings/crud.php?delete_slider_id=" . $key['id'] ?>">
+                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i>
+                                            </button>
+                                        </a>
                                     </td>
                                 </tr>
                             <?php } ?>

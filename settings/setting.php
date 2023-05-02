@@ -10,11 +10,7 @@ if (isset($page)) {
     }
 
     if ($page == "service") {
-
         $getData = getData('service');
-//        var_dump($getData[0]['title']);
-//        exit();
-
     }
 
 

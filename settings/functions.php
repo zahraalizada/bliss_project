@@ -6,20 +6,12 @@ include "db.php";
 function getInsert(string $tName,array $columnName,array $values): bool
 {
     global  $conn;
-
     $sql = "INSERT INTO  $tName  (" . implode(',' , $columnName) .") VALUES (?, ? , ? , ? , ?, ?)";
-
     $insert = $conn->prepare($sql);
     $insert->execute($values);
-
     return true;
 }
 
-function getUpdate(string $tName,array $columnName,array $values,int $id): bool
-{
-
-    return true;
-}
 
 function getData(string $tableName,$id=null){
     global  $conn;
@@ -31,29 +23,36 @@ function getData(string $tableName,$id=null){
         return $sth->fetchAll(\PDO::FETCH_ASSOC);
 
     }else{
+        $sql="SELECT * FROM $tableName WHERE id = ?";
+        $sth = $conn->prepare($sql);
+        $sth->execute([$id]);
+        return $sth->fetchAll(\PDO::FETCH_ASSOC);
 
     }
-    return true;
 }
 
 function getDelete(string $tableName,int $id): bool
 {
+    global  $conn;
     $query = $conn->prepare("DELETE FROM $tableName WHERE id = ?");
     return (bool)  $query->execute([$id]);
 }
 
-//$insert = getInsert('services',['name','image','title'],['sadiq','http','basliq']);
-//$update = getUpdate('services',['name','image','title'],['sadiq','http','basliq'],1);
-//$getData = getData('services');
-//$getData = getData('services',1);
-//$getDelete = getDelete('services',$_POST['id']);
-//if ($insert){
-//
-//}
+function getUpdate(string $tName,array $columnName,array $values,int $id)
+{
+    global  $conn;
+    $sql = "UPDATE   $tName  SET ";
+    for($i=0; $i<count($columnName); $i++){
+        $sql.=' '.$columnName[$i].'=?,';
+    }
+    $sql = rtrim($sql,",");
+    $sql.=" WHERE id={$id}";
 
-//anar test
-//$sql = "INSERT INTO about (header,image,content) VALUES (?,?,?)";
-//$insert = $conn->prepare($sql);
-//$insert->execute([$about_header,$about_image,$about_description]);
-//header("Location:add_about.php");
+    $insert = $conn->prepare($sql);
+    return $insert->execute($values);
+
+}
+
+
+
 ?>
