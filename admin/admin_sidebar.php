@@ -11,22 +11,15 @@
                 </a>
             </li>
             <li class="">
-                <a href="header.php" >
-                    <i class="fa fa-dashboard"></i>
-                    <span>Header</span>
+                <a href="slider.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Slider</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="service.php">
                     <i class="fa fa-server"></i>
                     <span>Services </span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fa fa-envelope"></i>
-                    <span>Mail </span>
-                    <span class="label label-theme pull-right mail-info">3</span>
                 </a>
             </li>
         </ul>
