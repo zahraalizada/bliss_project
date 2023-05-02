@@ -49,7 +49,7 @@ include "../settings/setting.php";
                             <tr>
                                 <td>
                                     <a href="basic_table.html#">
-                                        Dashio co
+                                        Dashio co test sadiq
                                     </a>
                                 </td>
                                 <td class="hidden-phone">Lorem Ipsum dolor</td>
