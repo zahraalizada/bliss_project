@@ -2,7 +2,6 @@
 include "admin_header.php";
 include "../settings/setting.php";
 
-
 ?>
 
 

@@ -15,7 +15,9 @@ include "../settings/setting.php";
                         <table class="table table-striped table-advance table-hover">
                             <div class="d-flex justify-content-between align-items-center">
                                 <h4><i class="fa fa-angle-right"></i> Slider Table</h4>
-                                <a href="new_slider.php" ><button class="btn btn-primary me-3">Add</button></a>
+                                <a href="new_slider.php">
+                                    <button class="btn btn-primary me-3">Add</button>
+                                </a>
                             </div>
 
                             <hr>
@@ -32,22 +34,23 @@ include "../settings/setting.php";
                             </tr>
                             </thead>
                             <tbody>
+                            <?php foreach ($getData as $key) { ?>
 
-
-                            <tr>
-                                <td>Title 1</td>
-                                <td>Content 1</td>
-                                <td>VideoImg 1</td>
-                                <td>VideoImg 2</td>
-                                <td>Video URL 1</td>
-                                <td>Video URL 2</td>
-                                <td><span class="label label-info label-mini">Status 1</span></td>
-                                <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                    <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                    <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                                </td>
-                            </tr>
+                                <tr>
+                                    <td><?= $key['title'] ?></td>
+                                    <td><?= $key['content'] ?></td>
+                                    <td><?= $key['video_img1'] ?></td>
+                                    <td><?= $key['video_img2'] ?></td>
+                                    <td><?= $key['video_url1'] ?></td>
+                                    <td><?= $key['video_url2'] ?></td>
+                                    <td><span class="label label-info label-mini">Status 1</span></td>
+                                    <td>
+                                        <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
+                                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
+                                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                    </td>
+                                </tr>
+                            <?php } ?>
 
                             </tbody>
                         </table>

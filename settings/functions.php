@@ -30,7 +30,6 @@ function getData(string $tableName,$id=null){
         $sth->execute();
         return $sth->fetchAll(\PDO::FETCH_ASSOC);
 
-
     }else{
 
     }
