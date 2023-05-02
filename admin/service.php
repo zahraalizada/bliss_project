@@ -3,9 +3,6 @@ include "admin_header.php";
 $page = "service";
 include "../settings/setting.php";
 
-// DB yaratdiqlarimiz
-//service table > id, title, content, img, slug
-
 ?>
 
 
