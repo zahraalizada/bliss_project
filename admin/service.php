@@ -6,9 +6,6 @@ include "../settings/setting.php";
 // DB yaratdiqlarimiz
 //service table > id, title, content, img, slug
 
-
-
-
 ?>
 
 
@@ -19,7 +16,7 @@ include "../settings/setting.php";
                 <div class="col-md-12">
                     <div class="content-panel">
                         <table class="table table-striped table-advance table-hover">
-                            <h4><i class="fa fa-angle-right"></i> Advanced Table</h4>
+                            <h4><i class="fa fa-angle-right"></i> Service Table</h4>
                             <hr>
                             <thead>
                             <tr>

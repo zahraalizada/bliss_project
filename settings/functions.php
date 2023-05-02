@@ -35,6 +35,8 @@ $getDelete = getDelete('services',$_POST['id']);
 if ($insert){
 
 }
+
+//anar test
 //$sql = "INSERT INTO about (header,image,content) VALUES (?,?,?)";
 //$insert = $conn->prepare($sql);
 //$insert->execute([$about_header,$about_image,$about_description]);
