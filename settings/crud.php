@@ -37,8 +37,10 @@ if (isset($_GET['delete_slider_id'])) {
 
 // slider update
 if (isset($_POST['update_slider'])) {
+    $image1 = getImage($_FILES['video_img1']);
+    $image2 = getImage($_FILES['video_img2']);
     $hidden_input_id = $_POST['hdnid'];
-    getUpdate('slider', ['title', 'content', 'video_img1', 'video_img2', 'video_url1', 'video_url2','detail_link'], [$_POST['title'], $_POST['content'], $_POST['video_img1'], $_POST['video_img2'], $_POST['video_url1'], $_POST['video_url2'],$_POST['detail_link']], $hidden_input_id);
+    getUpdate('slider', ['title', 'content', 'video_img1', 'video_img2', 'video_url1', 'video_url2','detail_link'], [$_POST['title'], $_POST['content'], $image1, $image2, $_POST['video_url1'], $_POST['video_url2'],$_POST['detail_link']], $hidden_input_id);
     redirect('../admin/slider.php');
 }
 

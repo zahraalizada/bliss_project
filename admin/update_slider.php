@@ -58,8 +58,7 @@ include "../settings/setting.php";
                                     <div class="fileupload fileupload-new" data-provides="fileupload"><input
                                                 type="hidden">
                                         <div class="fileupload-new thumbnail img-box-mh150" >
-                                            <img src="../admin/img/<?= $data['video_img1'] ?>"
-                                                 alt="">
+                                            <img src="../admin/img/<?= $data['video_img1'] ?>" alt="">
                                         </div>
                                         <div class="fileupload-preview fileupload-exists thumbnail"
                                              style="max-width: 200px; max-height: 150px; line-height: 10px;"></div>
