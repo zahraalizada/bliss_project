@@ -27,9 +27,6 @@ include "../settings/setting.php";
                                 <th> Content</th>
                                 <th> Video_img1</th>
                                 <th> Video_img2</th>
-                                <th> Video_url1</th>
-                                <th> Video_url2</th>
-                                <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                             </thead>
@@ -39,14 +36,17 @@ include "../settings/setting.php";
                                 <tr>
                                     <td><?= $key['title'] ?></td>
                                     <td><?= $key['content'] ?></td>
-                                    <td><?= $key['video_img1'] ?></td>
-                                    <td><?= $key['video_img2'] ?></td>
-                                    <td><?= $key['video_url1'] ?></td>
-                                    <td><?= $key['video_url2'] ?></td>
-                                    <td><span class="label label-info label-mini">Status 1</span></td>
                                     <td>
-                                        <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-<!--                                        <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>-->
+                                        <div class="img-box">
+                                            <img src="../admin/img/<?= $key['video_img1'];?> ">
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="img-box">
+                                            <img src="../admin/img/<?= $key['video_img2'];?> ">
+                                        </div>
+                                    </td>
+                                    <td>
                                         <a href="<?= "update_slider.php?update_slider_id=". $key['id'] ?>">
                                             <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></i>
                                             </button>

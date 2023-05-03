@@ -39,8 +39,6 @@ $data = $getData;
                         </div>
 
 
-
-
                         <div class="form-group">
                             <label class="control-label col-md-3">Slug</label>
                             <div class="col-md-3 col-xs-11">
