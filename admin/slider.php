@@ -34,8 +34,8 @@ include "../settings/setting.php";
                             <?php foreach ($getData as $key) { ?>
 
                                 <tr>
-                                    <td><?= $key['title'] ?></td>
-                                    <td><?= $key['content'] ?></td>
+                                    <td><?= $str = substr($key['title'], 0, 15) . '...'; ?></td>
+                                    <td><?= $str = substr($key['content'], 0, 15) . '...'; ?></td>
                                     <td>
                                         <div class="img-box">
                                             <img src="../admin/img/<?= $key['video_img1'];?> ">

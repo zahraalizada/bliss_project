@@ -29,7 +29,7 @@ include "../settings/setting.php";
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Content</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="content" value="<?= $data['content'] ?>">
+                                    <textarea style="resize: vertical" class="form-control" name="content" id="contact-message" rows="5" data-rule="required" ><?= trim($data['content']); ?></textarea>
                                 </div>
                             </div>
                             <div class="form-group">

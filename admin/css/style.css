@@ -3732,13 +3732,13 @@ justify-content: space-between;
 
 .img-box{
     width: 150px !important;
-    height: 50px !important;
+    height: 100px !important;
     overflow: hidden !important;
 }
 .img-box img, .img-box-mh150 img{
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;
+    object-fit: contain !important;
     object-position: center !important;
 }
 
