@@ -1,14 +1,10 @@
-<?php
-include "admin_header.php";
+<?php include "admin_header.php";
 $page = "slider";
 $id = $_GET['update_slider_id'];
+
 include "../settings/setting.php";
-
-
 ?>
 <?php $data = $getData; ?>
-<?php foreach ($getData as $key) { }?>
-
 
 
     <!-- row -->
