@@ -6,10 +6,17 @@ include "db.php";
 function getInsert(string $tName,array $columnName,array $values): bool
 {
     global  $conn;
-    $sql = "INSERT INTO  $tName  (" . implode(',' , $columnName) .") VALUES (?, ? , ? , ? , ?, ?)";
+    $sql = "INSERT INTO  $tName  ( ";
+    $sql .= implode(',' , $columnName);
+    $sql .= ") VALUES (";
+    for($i=0; $i<count($values); $i++){
+        $sql.='?,';
+    }
+    $sql = rtrim($sql,","). ")";
+
     $insert = $conn->prepare($sql);
-    $insert->execute($values);
-    return true;
+    return $insert->execute($values);
+
 }
 
 
@@ -23,10 +30,10 @@ function getData(string $tableName,$id=null){
         return $sth->fetchAll(\PDO::FETCH_ASSOC);
 
     }else{
-        $sql="SELECT * FROM $tableName WHERE id = ?";
+        $sql="SELECT * FROM $tableName WHERE id = $id";
         $sth = $conn->prepare($sql);
-        $sth->execute([$id]);
-        return $sth->fetchAll(\PDO::FETCH_ASSOC);
+        $sth->execute();
+        return $sth->fetch(\PDO::FETCH_ASSOC);
 
     }
 }

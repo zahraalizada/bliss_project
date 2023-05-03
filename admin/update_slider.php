@@ -1,11 +1,14 @@
 <?php
 include "admin_header.php";
 $page = "slider";
+$id = $_GET['update_slider_id'];
 include "../settings/setting.php";
 
-?>
 
-<?php foreach ($getData as $key) { } ?>
+?>
+<?php $data = $getData; ?>
+<?php foreach ($getData as $key) { }?>
+
 
 
     <!-- row -->
@@ -19,38 +22,39 @@ include "../settings/setting.php";
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Title</label>
                                 <div class="col-sm-10">
-                                    <input type="hidden" name="hdnid" value="<?php echo $key['id']; ?>">
-                                    <input type="text" class="form-control" name="title" value="<?= $key['title'] ?>">
+                                    <input type="hidden" name="hdnid" value="<?php echo $data['id']; ?>">
+                                    <input type="text" class="form-control" name="title" value="<?= $data['title'] ?>">
                                 </div>
                             </div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Content</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="content" value="<?= $key['content'] ?>">
+                                    <input type="text" class="form-control" name="content" value="<?= $data['content'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Video_img1</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="video_img1" value="<?= $key['video_img1'] ?>">
+                                    <input type="text" class="form-control" name="video_img1" value="<?= $data['video_img1'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Video_img2</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="video_img2" value="<?= $key['video_img2'] ?>">
+                                    <input type="text" class="form-control" name="video_img2" value="<?= $data['video_img2'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Video_URL1</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="video_url1" value="<?= $key['video_url1'] ?>">
+                                    <input type="text" class="form-control" name="video_url1" value="<?= $data['video_url1'] ?>">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 col-sm-2 control-label">Video_URL2</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="video_url2" value="<?= $key['video_url2'] ?>">
+                                    <input type="text" class="form-control" name="video_url2" value="<?= $data['video_url2'] ?>">
                                 </div>
                             </div>
 
@@ -95,6 +99,7 @@ include "../settings/setting.php";
             </div>
         </section>
     </section>
+
 
 
 <?php include "admin_footer.php"; ?>
