@@ -17,7 +17,7 @@ $data = $getData;
 
             <div class="col-lg-12">
                 <div class="form-panel">
-                    <form action="../settings/crud.php" class="form-horizontal style-form" method="post">
+                    <form action="../settings/crud.php" class="form-horizontal style-form" method="post" enctype="multipart/form-data">
 
                         <div class="form-group">
                             <input type="hidden" name="hidden" value="<?= $data['id'] ?>">
@@ -66,27 +66,22 @@ $data = $getData;
 
                         <div class="form-group last">
                             <label class="control-label col-md-3">Image Upload</label>
+                            <input type="file"  name="image" style="display: none;">
                             <div class="col-md-9">
                                 <div class="fileupload fileupload-new" data-provides="fileupload">
-                                    <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
-                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" alt="" />
+                                    <div class="fileupload-new thumbnail" style="width:auto; height:auto">
+                                        <img width="100%" height="100%"  src="../admin/img/<?php echo $data['image']; ?>" alt="image">
                                     </div>
                                     <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
                                     <div>
                         <span class="btn btn-theme02 btn-file">
-                          <span class="fileupload-new"><i class="fa fa-paperclip"></i> Select image1</span>
+                          <span class="fileupload-new"><i class="fa fa-paperclip"></i> Select image</span>
                         <span class="fileupload-exists"><i class="fa fa-undo"></i> Change</span>
-                        <input type="file" class="default" />
+                            <input type="file" class="default" name="image" />
                         </span>
                                         <a href="advanced_form_components.html#" class="btn btn-theme04 fileupload-exists" data-dismiss="fileupload"><i class="fa fa-trash-o"></i> Remove</a>
                                     </div>
                                 </div>
-                                <span class="label label-info">NOTE!</span>
-                                <span>
-                      Attached image thumbnail is
-                      supported in Latest Firefox, Chrome, Opera,
-                      Safari and Internet Explorer 10 only
-                      </span>
                             </div>
                         </div>
                         <a  ><button class="btn btn-primary me-3" name="update_service">Update</button></a>

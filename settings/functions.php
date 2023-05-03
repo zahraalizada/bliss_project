@@ -55,6 +55,15 @@ function getDelete(string $tableName, int $id): bool
     return (bool)$query->execute([$id]);
 }
 
+function getImage($img): string
+{
+    $image=rand().$img['name'];
+    $image_temp=$img['tmp_name'];
+
+    move_uploaded_file($image_temp, "../admin/img/$image");
+    return $image;
+}
+
 
 function redirect($arg)
 {

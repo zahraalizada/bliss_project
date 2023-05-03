@@ -3,17 +3,20 @@ include "functions.php";
 
 // service insert
 if (isset($_POST['add_service'])) {
-    $data = getInsert('service', ['title', 'content', 'image', 'slug', 'status', 'created_at'], [$_POST['title'], $_POST['content'], ' ', $_POST['slug'], $_POST['status'], 1]);
+    $image = getImage($_FILES['image']);
+    $data = getInsert('service', ['title', 'content', 'image', 'slug', 'status', 'created_at'], [$_POST['title'], $_POST['content'], $image, $_POST['slug'], $_POST['status'], 1]);
     redirect('../admin/service.php');
 }
+
 if (isset($_GET['delete_service_id'])) {
     $getDelete = getDelete('service', $_GET['delete_service_id']);
     redirect('../admin/service.php');
 }
 if (isset($_POST['update_service'])) {
+    $image = getImage($_FILES['image']);
     $hidden_update_id = $_POST['hidden'];
-    var_dump($hidden_update_id);
-    getUpdate('service', ['title', 'content', 'image', 'slug', 'status', 'created_at'], [$_POST['title'], $_POST['content'], ' ', $_POST['slug'], $_POST['status'], 1], $hidden_update_id);
+
+    getUpdate('service', ['title', 'content', 'image', 'slug', 'status', 'created_at'], [$_POST['title'], $_POST['content'], $image, $_POST['slug'], $_POST['status'], 1], $hidden_update_id);
     redirect('../admin/service.php');
 }
 

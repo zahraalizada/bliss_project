@@ -40,7 +40,8 @@ include "../settings/setting.php";
                                 </td>
                                 <td class="hidden-phone"><?= $key['title'] ?></td>
                                 <td><?= $key['content'] ?></td>
-                                <td><span class="label label-info label-mini"><?= $key['image'] ?></span></td>
+
+                                <td><img src="../admin/img/<?= $key['image'];?> " width="100" style="border-radius: 10px;"></td>
                                 <td> <?= $key['slug'] ?></td>
                                 <td> <?= $key['created_at'] ?></td>
                                 <td>
