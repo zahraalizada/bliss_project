@@ -32,6 +32,9 @@
 <script src="lib/common-scripts.js"></script>
 <!--script for this page-->
 
+<!--image js-->
+<script type="text/javascript" src="lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+
 </body>
 
 </html>

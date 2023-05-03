@@ -21,6 +21,8 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet">
 
+    <!--    Image Css-->
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap-fileupload/bootstrap-fileupload.css"/>
 </head>
 
 <body>
