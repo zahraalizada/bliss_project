@@ -13,6 +13,10 @@ if (isset($page)) {
         $getData = getData('service',$id ?? null);
     }
 
+    if ($page == "blog") {
+        $getData = getData('blog',$id ?? null);
+    }
+
 }
 
 ?>

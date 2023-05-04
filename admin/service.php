@@ -43,10 +43,12 @@ include "../settings/setting.php";
 
                                 <td><img src="../admin/img/<?= $key['image'];?> " width="100" style="border-radius: 10px;"></td>
                                 <td> <?= $key['slug'] ?></td>
-                                <td> <?= $key['created_at'] ?></td>
+                                <td><?= $key['status']==1?'Active':'Deactive'; ?></td>
                                 <td>
-                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                  <a  href="update_service.php?update_service_id=<?= $key['id'] ;?>">  <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
+<!--                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
+                                    <a href="../settings/crud.php?status_service_id=<?= $key['id'] ?>" >   <button class="btn <?= $key['status']==1?'btn-success':'btn-danger'?>  btn-xs"><i class="fa fa-check"></i></button></a>
+
+                                    <a  href="update_service.php?update_service_id=<?= $key['id'] ;?>">  <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button></a>
                                     <a onclick="return confirm('Are you sure?');" href="../settings/crud.php?delete_service_id=<?= $key['id'] ?>" >  <button class="btn btn-danger btn-xs" name="button" ><i class="fa fa-trash-o"></i></button></a>
                                 </td>
                             </tr>
