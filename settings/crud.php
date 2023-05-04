@@ -27,7 +27,7 @@ if (isset($_GET['status_service_id'])) {
 }
 
 
-// =========== SLIDER ============
+// =========== SLIDER ============1
 // slider insert
 if (isset($_POST['add_slider'])) {
     $image1 = getImage($_FILES['video_img1']);
