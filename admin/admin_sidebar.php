@@ -10,16 +10,28 @@
                     <span>Dashboard</span>
                 </a>
             </li>
-            <li class="">
+            <li>
                 <a href="slider.php" >
                     <i class="fa fa-server"></i>
                     <span>Slider</span>
                 </a>
             </li>
             <li>
+                <a href="about.php" >
+                    <i class="fa fa-server"></i>
+                    <span>About</span>
+                </a>
+            </li>
+            <li>
                 <a href="service.php">
                     <i class="fa fa-server"></i>
                     <span>Services </span>
+                </a>
+            </li>
+            <li>
+                <a href="blog.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Blog</span>
                 </a>
             </li>
         </ul>
