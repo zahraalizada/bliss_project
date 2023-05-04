@@ -37,24 +37,8 @@ include "../settings/setting.php";
                                 <label class="col-sm-2 col-sm-2 control-label">Status</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" name="status">
-                                        <?php
-                                        if ($data['status'] == 0) {
-                                            echo
-                                            "
-                                            <option disabled='disabled'>Select status</option>
-                                            <option value='0' checked='checked'>0</option>
-                                            <option value='1'>1</option>
-                                            ";
-                                        } else {
-                                            echo
-                                            "
-                                            <option disabled='disabled'>Select status</option>
-                                            <option value='0'>0</option>
-                                            <option value='1' checked='checked'>1</option>
-                                            ";
-                                        }
-                                        ?>
-
+                                        <option value='0' <?= $data['status']==0?"checked='checked'":'' ?>>Deactive</option>
+                                        <option value='1' <?= $data['status']==1?"checked='checked'":'' ?>>Active</option>
                                     </select>
                                 </div>
                             </div>

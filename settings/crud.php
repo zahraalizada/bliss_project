@@ -86,4 +86,11 @@ if (isset($_POST['update_blog'])) {
 }
 
 
+if (isset($_GET['change_blog_status'])){
+    $data = getData('blog',$_GET['change_blog_status']);
+    $data['status']==1?$status=0:$status=1;
+    getUpdate('blog',['status'],[$status],$_GET['change_blog_status']);
+    redirect('../admin/blog.php');
+}
+
 ?>

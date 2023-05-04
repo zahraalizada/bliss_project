@@ -30,9 +30,8 @@ include "../settings/setting.php";
                                 <label class="col-sm-2 col-sm-2 control-label">Status</label>
                                 <div class="col-sm-10">
                                     <select class="form-control" name="status">
-                                        <option disabled="disabled" selected="selected">Select status</option>
-                                        <option value="0">0</option>
-                                        <option value="1">1</option>
+                                        <option value="1">Active</option>
+                                        <option value="0">Deactive</option>
                                     </select>
                                 </div>
                             </div>
