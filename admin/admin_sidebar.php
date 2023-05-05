@@ -18,31 +18,31 @@
             </li>
             <li>
                 <a href="about.php" >
-                    <i class="fa fa-server"></i>
+                    <i class="fa fa-address-card-o"></i>
                     <span>About</span>
                 </a>
             </li>
             <li>
                 <a href="service.php">
-                    <i class="fa fa-server"></i>
+                    <i class="fa fa-list"></i>
                     <span>Services </span>
                 </a>
             </li>
             <li>
                 <a href="blog.php" >
-                    <i class="fa fa-server"></i>
+                    <i class="fa fa-list-alt"></i>
                     <span>Blog</span>
                 </a>
             </li>
             <li>
                 <a href="social.php" >
-                    <i class="fa fa-server"></i>
+                    <i class="fa fa-share-alt"></i>
                     <span>Social</span>
                 </a>
             </li>
             <li>
                 <a href="subscribe.php" >
-                    <i class="fa fa-server"></i>
+                    <i class="fa fa-at"></i>
                     <span>Subscribe</span>
                 </a>
             </li>
