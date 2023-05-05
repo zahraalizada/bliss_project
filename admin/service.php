@@ -21,12 +21,14 @@ include "../settings/setting.php";
                             <hr>
                             <thead>
                             <tr>
-                                <th><i class="fa fa-bullhorn"></i> Id</th>
+
                                 <th class="hidden-phone"><i class="fa fa-question-circle"></i> Title</th>
                                 <th><i class="fa fa-bookmark"></i> Content</th>
                                 <th><i class=" fa fa-edit"></i> Image</th>
                                 <th><i class=" fa fa-edit"></i> Slug</th>
+
                                 <th><i class=" fa fa-edit"></i> Date</th>
+                                <th><i class=" fa fa-edit"></i> status</th>
                                 <th><i class=" fa fa-edit"></i> Actions</th>
                                 <th></th>
                             </tr>
@@ -35,14 +37,14 @@ include "../settings/setting.php";
                            <?php foreach ($getData as $key){
 //                               var_dump($key['id']);?>
                             <tr>
-                                <td>
-                                    <a href="basic_table.html#"><?= $key['id'] ?></a>
-                                </td>
+
                                 <td class="hidden-phone"><?= $key['title'] ?></td>
                                 <td><?= $key['content'] ?></td>
 
                                 <td><img src="../admin/img/<?= $key['image'];?> " width="100" style="border-radius: 10px;"></td>
                                 <td> <?= $key['slug'] ?></td>
+
+                                <td> <?= $key['created_at'] ?></td>
                                 <td><?= $key['status']==1?'Active':'Deactive'; ?></td>
                                 <td>
 <!--                                    <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>-->
