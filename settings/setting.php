@@ -21,6 +21,14 @@ if (isset($page)) {
         $getData = getData('about', $id ?? null);
     }
 
+    if ($page == 'social') {
+        $getData = getData('social', $id ?? null);
+    }
+
+    if ($page == 'subscribe') {
+        $getData = getData('subscribe', $id ?? null);
+    }
+
 }
 
 ?>

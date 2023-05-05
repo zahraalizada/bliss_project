@@ -34,6 +34,18 @@
                     <span>Blog</span>
                 </a>
             </li>
+            <li>
+                <a href="social.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Social</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscribe.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Subscribe</span>
+                </a>
+            </li>
         </ul>
         <!-- sidebar menu end-->
     </div>
