@@ -34,6 +34,12 @@
                     <span>Blog</span>
                 </a>
             </li>
+            <li>
+                <a href="contact.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
         </ul>
         <!-- sidebar menu end-->
     </div>

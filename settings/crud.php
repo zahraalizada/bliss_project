@@ -21,8 +21,6 @@ if (isset($_POST['update_service'])) {
     }
     redirect('../admin/service.php');
 }
-
-
 if (isset($_GET['status_service_id'])) {
     $data = getData('service', $_GET['status_service_id']);
     $data['status'] == 0 ? $status = 1 : $status = 0;
@@ -52,6 +50,29 @@ if (isset($_POST['update_about'])) {
     redirect('../admin/about.php');
 }
 
+// contact insert
+if (isset($_POST['add_contact'])) {
+    $data = getInsert('contact', ['name', 'email', 'number', 'date', 'message', 'status','time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'],$_POST['time'],]);
+    redirect('../admin/contact.php');
+}
+if (isset($_GET['delete_contact_id'])) {
+    $getDelete = getDelete('contact', $_GET['delete_contact_id']);
+    redirect('../admin/contact.php');
+}
+
+if (isset($_GET['status_contact_id'])) {
+    $data = getData('contact', $_GET['status_contact_id']);
+    $data['status'] == 0 ? $status = 1 : $status = 0;
+    getUpdate('contact', ['status'], [$status], $_GET['status_contact_id']);
+    redirect('../admin/contact.php');
+}
+if (isset($_POST['update_contact'])){
+    $hidden_update_id = $_POST['hidden'];
+
+   getUpdate ('contact', ['name', 'email', 'number', 'date', 'message', 'status','time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'],$_POST['time']], $hidden_update_id);
+    redirect('../admin/contact.php');
+
+}
 
 // =========== SLIDER ============10
 // slider insert
