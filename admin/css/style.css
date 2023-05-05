@@ -3747,7 +3747,12 @@ justify-content: space-between;
     max-height: 150px !important;
     overflow: hidden !important;
 }
+
 .ml-20{
     margin-left: 20px !important;
+}
+
+.mt-3{
+    margin-top: 8px !important;
 }
 

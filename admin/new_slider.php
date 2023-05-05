@@ -92,7 +92,7 @@ include "../settings/setting.php";
 
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
-                                    <button class="btn btn-theme" type="submit" name="add_slider">Save</button>
+                                    <button class="btn btn-theme" type="submit" name="add_slider">Add</button>
 <!--                                    <button class="btn btn-theme04" type="button">Cancel</button>-->
                                 </div>
                             </div>
