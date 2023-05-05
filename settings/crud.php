@@ -146,4 +146,43 @@ if (isset($_GET['change_blog_status'])) {
 }
 
 
+
+// =========== SOCIAL ============
+// social insert
+if (isset($_POST['add_social'])) {
+    $data = getInsert('social', ['title','link','icon'], [$_POST['title'], $_POST['link'],$_POST['icon']]);
+    redirect('../admin/social.php');
+}
+
+// social delete
+if (isset($_GET['delete_social_id'])) {
+    getDelete('social', $_GET['delete_social_id']);
+    redirect('../admin/social.php');
+}
+
+// social update
+if (isset($_POST['update_social'])) {
+    $hidden_update_id = $_POST['hdnid'];
+
+    getUpdate('social', ['title', 'link','icon'], [$_POST['title'], $_POST['link'], $_POST['icon']], $hidden_update_id);
+    redirect('../admin/social.php');
+}
+
+
+// =========== SUBSCRIBE ============
+
+// subscribe delete
+if (isset($_GET['delete_subscribe_id'])) {
+    getDelete('subscribe', $_GET['delete_subscribe_id']);
+    redirect('../admin/subscribe.php');
+}
+
+// subscribe update
+if (isset($_POST['update_subscribe'])) {
+    $hidden_update_id = $_POST['hdnid'];
+
+    getUpdate('social', ['email'], [$_POST['email']], $hidden_update_id);
+    redirect('../admin/subscribe.php');
+}
+
 ?>

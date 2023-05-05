@@ -59,11 +59,9 @@ include "../settings/setting.php";
                                 </div>
                             </div>
 
-
-
                             <div class="form-group">
                                 <div class="col-lg-offset-2 col-lg-10">
-                                    <button class="btn btn-theme" type="submit" name="add_blog">Save</button>
+                                    <button class="btn btn-theme" type="submit" name="add_blog">Add</button>
                                 </div>
                             </div>
                         </form>

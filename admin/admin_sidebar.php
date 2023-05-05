@@ -35,6 +35,18 @@
                 </a>
             </li>
             <li>
+                <a href="social.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Social</span>
+                </a>
+            </li>
+            <li>
+                <a href="subscribe.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Subscribe</span>
+                </a>
+            </li>
+            <li>
                 <a href="contact.php" >
                     <i class="fa fa-server"></i>
                     <span>Contact</span>
