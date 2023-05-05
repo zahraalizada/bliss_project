@@ -30,25 +30,6 @@
                             </div>
                         </div>
 
-
-
-
-
-
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Status</label>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="status" id="status" value="0">0
-                                </label>
-                                <label>
-                                    <input type="radio" name="status" id="status" value="1">1
-                                </label>
-                            </div>
-
-                        </div>
-
-
                         <div class="form-group last">
                             <label class="control-label col-md-3">Image Upload</label>
                             <input type="file"  name="image" style="display: none;">
