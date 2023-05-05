@@ -1,17 +1,18 @@
 <?php include "admin_header.php";
-$page = "service";
-$id = $_GET['update_service_id'];
+$page = "about";
+$id = $_GET['update_about_id'];
 include "../settings/setting.php";
 ?>
 <?php
 $data = $getData;
+
 ?>
 
 
 
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Form Service</h3>
+        <h3><i class="fa fa-angle-right"></i> Form About</h3>
         <div class="row mt">
             <!--  DATE PICKERS -->
 
@@ -39,27 +40,6 @@ $data = $getData;
                         </div>
 
 
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Slug</label>
-                            <div class="col-md-3 col-xs-11">
-                                <input class="form-control form-control-inline input-medium default-date-picker" name="slug" size="16" type="text" value="<?php echo $data['slug'] ?>">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Status</label>
-                            <div class="radio">
-                                <label>
-                                    <input type="radio" name="status" id="status" value="<?php echo $data['status'] ?>">
-                                    0
-                                </label>
-                                <label>
-                                    <input type="radio" name="status" id="status" value="<?php echo $data['status'] ?>">
-                                   1
-                                </label>
-                            </div>
-
-                        </div>
 
 
                         <div class="form-group last">
@@ -82,7 +62,7 @@ $data = $getData;
                                 </div>
                             </div>
                         </div>
-                        <a  ><button class="btn btn-primary me-3" name="update_service">Update</button></a>
+                        <a  ><button class="btn btn-primary me-3" name="update_about">Update</button></a>
                             </div>
                         </div>
 

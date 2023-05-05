@@ -3,7 +3,7 @@
 
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Form Service</h3>
+        <h3><i class="fa fa-angle-right"></i> Form About</h3>
         <div class="row mt">
             <!--  DATE PICKERS -->
 
@@ -33,12 +33,7 @@
 
 
 
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Slug</label>
-                            <div class="col-md-3 col-xs-11">
-                                <input class="form-control form-control-inline input-medium default-date-picker" name="slug" size="16" type="text" value="">
-                            </div>
-                        </div>
+
 
                         <div class="form-group">
                             <label class="control-label col-md-3">Status</label>
@@ -76,7 +71,7 @@
 
                             </div>
                         </div>
-                        <a  ><button class="btn btn-primary me-3" name="add_service">Add</button></a>
+                        <a  ><button class="btn btn-primary me-3" name="add_about">Add</button></a>
                             </div>
                         </div>
                     </form>

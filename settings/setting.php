@@ -17,6 +17,10 @@ if (isset($page)) {
         $getData = getData('blog',$id ?? null);
     }
 
+    if ($page == 'about') {
+        $getData = getData('about', $id ?? null);
+    }
+
 }
 
 ?>
