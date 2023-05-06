@@ -73,7 +73,7 @@ if (isset($_POST['update_contact'])){
 
 }
 
-// =========== SLIDER ============10
+// =========== SLIDER ============
 // slider insert
 if (isset($_POST['add_slider'])) {
     $image1 = getImage($_FILES['video_img1']);
@@ -169,7 +169,6 @@ if (isset($_POST['update_social'])) {
 
 
 // =========== SUBSCRIBE ============
-
 // subscribe delete
 if (isset($_GET['delete_subscribe_id'])) {
     getDelete('subscribe', $_GET['delete_subscribe_id']);
