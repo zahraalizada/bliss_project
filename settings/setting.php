@@ -36,6 +36,7 @@ if (isset($page)) {
     if ($page == 'contact') {
         $getData = getData('contact', $id ?? null);
     }
+
 }
 
 ?>
