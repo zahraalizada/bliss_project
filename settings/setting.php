@@ -33,8 +33,13 @@ if (isset($page)) {
         $getData = getData('subscribe', $id ?? null);
     }
 
-    if ($page == 'contact') {
-        $getData = getData('contact', $id ?? null);
+
+
+    if ($page == 'index') {
+        $getservice = getData('service',$id ?? null);
+        $getabout = getData('about', $id ?? null);
+        $getcontact = getData('contact', $id ?? null);
+        $getslider = getData('slider',$id ?? null);
     }
 
 }
