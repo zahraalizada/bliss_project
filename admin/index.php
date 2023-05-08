@@ -1,7 +1,10 @@
 <?php include "admin_header.php";
-$page = "contact";
-$page = "service";
+$page = "index";
 include "../settings/setting.php";
+?>
+<?php
+
+
 ?>
 
 
@@ -21,8 +24,13 @@ include "../settings/setting.php";
 
 <form  action="../settings/crud.php" method="post">
     <input type="hidden" name="index">
-<?php foreach ($getData as $key);
-var_dump($key);
+<?php
+$getcontact=count($getcontact);
+$getservice=count($getservice);
+$getabout=count($getabout);
+$getslider=count($getslider);
+
+
 ?>
 
     <script type="text/javascript">
@@ -32,10 +40,10 @@ var_dump($key);
         function drawVisualization() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
-                ['Month', 'Slider', 'Service', 'Contact', 'About', 'Rwanda', 'Average'],
+                ['Month', <button></button>, 'Service', 'Contact', 'About', 'Rwanda', 'Average'],
 
 
-                ['2004/05',  165,      938,         522,             998,           450,      614.6],
+                ['data',  <?php echo $getslider ?>,       <?php echo $getservice ?>,          <?php echo $getcontact ?>,              <?php echo $getabout ?>,            <?php echo $getcontact ?>,       <?php echo $getcontact ?>],
 
 
             ]);
@@ -43,6 +51,7 @@ var_dump($key);
             var options = {
                 title : '',
                  seriesType: 'bars',
+
             };
 
             var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
