@@ -1,5 +1,6 @@
 <?php include "admin_header.php";
-$page = "index";
+$page = "contact";
+$page = "service";
 include "../settings/setting.php";
 ?>
 
@@ -20,7 +21,9 @@ include "../settings/setting.php";
 
 <form  action="../settings/crud.php" method="post">
     <input type="hidden" name="index">
-
+<?php foreach ($getData as $key);
+var_dump($key);
+?>
 
     <script type="text/javascript">
         google.charts.load('current', {'packages':['corechart']});
@@ -29,10 +32,11 @@ include "../settings/setting.php";
         function drawVisualization() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
-                ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Rwanda', 'Average'],
+                ['Month', 'Slider', 'Service', 'Contact', 'About', 'Rwanda', 'Average'],
 
 
                 ['2004/05',  165,      938,         522,             998,           450,      614.6],
+
 
             ]);
 
