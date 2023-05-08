@@ -40,7 +40,7 @@ $getslider=count($getslider);
         function drawVisualization() {
             // Some raw data (not necessarily accurate)
             var data = google.visualization.arrayToDataTable([
-                ['Month', <button></button>, 'Service', 'Contact', 'About', 'Rwanda', 'Average'],
+                ['Month', 'Slider', 'Service', 'Contact', 'About', 'Rwanda', 'Average'],
 
 
                 ['data',  <?php echo $getslider ?>,       <?php echo $getservice ?>,          <?php echo $getcontact ?>,              <?php echo $getabout ?>,            <?php echo $getcontact ?>,       <?php echo $getcontact ?>],
