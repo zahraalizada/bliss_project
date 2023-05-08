@@ -9,6 +9,10 @@
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <title>Bliss - SPA Centre</title>
 
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
     <!-- Favicons -->
     <link href="img/favicon.png" rel="icon">
     <link href="img/apple-touch-icon.png" rel="apple-touch-icon">

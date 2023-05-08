@@ -1,7 +1,7 @@
 <?php
 include "functions.php";
 
-// service insert
+//======= service insert======
 if (isset($_POST['add_service'])) {
     $image = getImage($_FILES['image']);
     $data = getInsert('service', ['title', 'content', 'image', 'slug', 'status', 'created_at'], [$_POST['title'], $_POST['content'], $image, $_POST['slug'], $_POST['status'], 1]);
@@ -29,7 +29,7 @@ if (isset($_GET['status_service_id'])) {
 }
 
 
-//////// about insert
+//========about insert=====
 if (isset($_POST['add_about'])) {
     $image = getImage($_FILES['image']);
     $data = getInsert('about', ['title', 'content', 'image', 'date', 'status'], [$_POST['title'], $_POST['content'], $image, $_POST['status'], 1]);
@@ -50,7 +50,7 @@ if (isset($_POST['update_about'])) {
     redirect('../admin/about.php');
 }
 
-// contact insert
+//====== contact insert========
 if (isset($_POST['add_contact'])) {
     $data = getInsert('contact', ['name', 'email', 'number', 'date', 'message', 'status','time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'],$_POST['time'],]);
     redirect('../admin/contact.php');
@@ -68,7 +68,6 @@ if (isset($_GET['status_contact_id'])) {
 }
 if (isset($_POST['update_contact'])){
     $hidden_update_id = $_POST['hidden'];
-
    getUpdate ('contact', ['name', 'email', 'number', 'date', 'message', 'status','time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'],$_POST['time']], $hidden_update_id);
     redirect('../admin/contact.php');
 

@@ -33,6 +33,10 @@ if (isset($page)) {
         $getData = getData('subscribe', $id ?? null);
     }
 
+    if ($page == 'contact') {
+        $getData = getData('contact', $id ?? null);
+    }
+
 }
 
 ?>
