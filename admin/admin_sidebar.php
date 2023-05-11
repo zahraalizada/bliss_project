@@ -52,6 +52,12 @@
                     <span>Contact</span>
                 </a>
             </li>
+            <li>
+                <a href="../website/index.php" >
+                    <i class="fa fa-server"></i>
+                    <span>Web Site</span>
+                </a>
+            </li>
         </ul>
         <!-- sidebar menu end-->
     </div>

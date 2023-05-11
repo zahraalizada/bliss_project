@@ -53,6 +53,13 @@ if (isset($_POST['update_about'])) {
     }
     redirect('../admin/about.php');
 }
+//===contact send===
+
+if (isset($_POST['contact_send'])) {
+
+    $data = getInsert('contact', ['name', 'email', 'number', 'date', 'message', 'time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['time'],]);
+    redirect('../website/index.php');
+}
 
 //====== contact insert========
 if (isset($_POST['add_contact'])) {
@@ -206,6 +213,7 @@ if (isset($_POST['admin_login'])) {
         header("location: ../website/login.php");
         exit();
     } elseif ($_POST['user_name'] === $user_name && $_POST['password'] === $password) {
+        $_SESSION['admin'] = $_POST['user_name'];
         header("location: ../admin/index.php");
         exit();
     }else{

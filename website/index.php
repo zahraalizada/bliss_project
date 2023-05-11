@@ -1,4 +1,7 @@
-<?php include "header.php";?>
+<?php include "header.php";
+$page = 'index';
+include '../settings/siteSetting.php';
+?>
 
 <!-- body -->
 
@@ -14,7 +17,7 @@
                <div class="row d_flex">
                   <div class=" col-md-3 col-sm-3">
                      <div class="logo">
-                        <a href="index.html">Bliss</a>
+                        <a href="index.php">Bliss</a>
                      </div>
                   </div>
                   <div class="col-md-9 col-sm-9">
@@ -25,7 +28,7 @@
                               <li><a href="about.html">About</a></li>
                               <li><a href="service.html">Service</a></li>
                               <li><a href="blog.html">Blog</a></li>
-                              <li><a href="contact.html">Contact us</a></li>
+                              <li><a href="contact.php">Contact us</a></li>
                               <li class="d_none"><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                               <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                            </ul>
@@ -49,14 +52,18 @@
                   <li data-target="#banner1" data-slide-to="2"></li>
                </ol>
                <div class="carousel-inner">
-                  <!-- first slide -->
+                 <?php foreach ($slide as $key => $val){?>
+                          <?php if ($key==0){?>
                   <div class="carousel-item active">
+                      <?php } else {?>
+                          <div class="carousel-item">
+                              <?php } ?>
                      <div class="container">
                         <div class="carousel-caption relative">
                            <div class="row d_flex">
                               <div class="col-md-5">
                                  <div class="creative">
-                                    <h1>Spa <br>Center </h1>
+                                    <h1> <?= $val['title'] ?> </h1>
                                     <p>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
                                     <a class="read_more" href="Javascript:void(0)">Contact us</a>
                                     <a class="read_more" href="Javascript:void(0)">Read More</a>
@@ -86,80 +93,7 @@
                         </div>
                      </div>
                   </div>
-                  <!-- second slide -->
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="carousel-caption relative">
-                           <div class="row d_flex">
-                              <div class="col-md-5">
-                                 <div class="creative">
-                                    <h1>Spa <br>Center </h1>
-                                    <p>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
-                                    <a class="read_more" href="Javascript:void(0)">Contact us</a>
-                                    <a class="read_more" href="Javascript:void(0)">Read More</a>
-                                 </div>
-                              </div>
-                              <div class="col-md-7">
-                                 <div class="row mar_right">
-                                    <div class="col-md-6">
-                                       <div class="agency">
-                                          <figure><img src="images/img1.png" alt="#"/></figure>
-                                          <div class="play_icon">
-                                             <a class="play-btn" href="javascript:void(0)"><img src="images/play_icon.png"></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="agency">
-                                          <figure><img src="images/img2.png" alt="#"/></figure>
-                                          <div class="play_icon">
-                                             <a class="play-btn" href="javascript:void(0)"><img src="images/play_icon.png"></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- third slide-->
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="carousel-caption relative">
-                           <div class="row d_flex">
-                              <div class="col-md-5">
-                                 <div class="creative">
-                                    <h1>Spa <br>Center </h1>
-                                    <p>commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint</p>
-                                    <a class="read_more" href="Javascript:void(0)">Contact us</a>
-                                    <a class="read_more" href="Javascript:void(0)">Read More</a>
-                                 </div>
-                              </div>
-                              <div class="col-md-7">
-                                 <div class="row mar_right">
-                                    <div class="col-md-6">
-                                       <div class="agency">
-                                          <figure><img src="images/img1.png" alt="#"/></figure>
-                                          <div class="play_icon">
-                                             <a class="play-btn" href="javascript:void(0)"><img src="images/play_icon.png"></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                       <div class="agency">
-                                          <figure><img src="images/img2.png" alt="#"/></figure>
-                                          <div class="play_icon">
-                                             <a class="play-btn" href="javascript:void(0)"><img src="images/play_icon.png"></a>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+               <?php } ?>
                </div>
                <!-- controls -->
                <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
