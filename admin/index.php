@@ -21,8 +21,6 @@ include "../settings/setting.php";
                                     $getservice = count($getservice);
                                     $getabout = count($getabout);
                                     $getslider = count($getslider);
-
-
                                 ?>
 
                                 <script type="text/javascript">
@@ -48,37 +46,6 @@ include "../settings/setting.php";
                             </form>
                             <div id="chart_div" style="width: auto; height: 500px;"></div>
                         </div>
-
-
-
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <!--CUSTOM CHART START -->
-                                <div class="border-head">
-                                    <h3>USER VISITS</h3>
-                                </div>
-                                <div class="custom-bar-chart">
-                                    <ul class="y-axis">
-                                        <li><span><?php echo $getslider ?></span></li>
-                                        <li><span><?php echo $getservice ?></span></li>
-<?php $num= 100 ; ?>
-                                        <li><span>0</span></li>
-                                    </ul>
-                                    <div class="bar">
-                                        <div class="title">JAN</div>
-                                        <div class="value tooltips" data-original-title="<?php echo $getslider ?>" data-toggle="tooltip" data-placement="top"></div>
-                                    </div>
-                                    <div class="bar ">
-                                        <div class="title">FEB</div>
-                                        <div class="value tooltips" data-original-title="<?php echo $getservice ?>" data-toggle="tooltip" data-placement="top"></div>
-                                    </div>
-
-                                </div>
-                                <!--custom chart end-->
-                            </div>
-
-                        </div>
-
                     </div>
                 </section>
             </div>
