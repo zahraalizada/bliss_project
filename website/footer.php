@@ -28,7 +28,7 @@
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="service.html">Service</a></li>
                                     <li><a href="blog.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact us</a></li>
+                                    <li><a href="contact.php">Contact us</a></li>
                                 </ul>
                             </div>
                         </div>

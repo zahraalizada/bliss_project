@@ -1,7 +1,10 @@
 <?php
 include "../website/header.php";
 include '../website/index_navigation.php';?>
-
+<?php if (isset($_SESSION['admin'])){
+    header("location: ../admin/index.php");
+    exit();
+} ?>
 <div class="appointment">
     <div class="container">
         <div class="row">

@@ -1,5 +1,6 @@
 <?php
-
+session_start();
+ob_start();
 $host = "45.84.206.203";
 $dbname = "u601023761_demo";
 $username = "u601023761_demo";
