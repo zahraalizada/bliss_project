@@ -3735,7 +3735,12 @@ justify-content: space-between;
     height: 100px !important;
     overflow: hidden !important;
 }
-.img-box img, .img-box-mh150 img{
+.img-box-slider{
+    width: 400px !important;
+    height: 250px !important;
+    overflow: hidden !important;
+}
+.img-box img, .img-box-mh150 img, .img-box-slider img{
     width: 100% !important;
     height: 100% !important;
     object-fit: contain !important;
