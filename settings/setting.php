@@ -33,8 +33,6 @@ if (isset($page)) {
         $getData = getData('subscribe', $id ?? null);
     }
 
-
-
     if ($page == 'index') {
         $getservice = getData('service',$id ?? null);
         $getabout = getData('about', $id ?? null);
@@ -42,6 +40,15 @@ if (isset($page)) {
         $getslider = getData('slider',$id ?? null);
     }
 
+    if ($page == 'login') {
+        $getData = getData('login_admin', $id ?? null);
+
+    }
+
+    if ($page == 'profil') {
+        $getData = getData('login_admin', $id ?? null);
+
+    }
 }
 
 ?>

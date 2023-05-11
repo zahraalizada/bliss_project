@@ -48,6 +48,20 @@ function getData(string $tableName, $id = null)
     }
 }
 
+function getDataColumns(string $tableName, $columns, $values)
+{
+    global $conn;
+        $query = 'WHERE ';
+        for($i=0; $i<count($columns); $i++){
+            $query.=$columns[$i].' = "'.$values[$i].'" and ';
+        }
+        $query = rtrim($query, " and");
+        $sql = "SELECT * FROM $tableName $query";
+        $sth = $conn->prepare($sql);
+        $sth->execute();
+        return $sth->fetch(\PDO::FETCH_ASSOC);
+}
+
 function getDelete(string $tableName, int $id): bool
 {
     global $conn;

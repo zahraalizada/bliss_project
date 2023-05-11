@@ -30,9 +30,9 @@ include "../settings/setting.php";
                                     function drawVisualization() {
                                         var data = google.visualization.arrayToDataTable
                                         ([
-                                            ['Month', 'Slider', 'Service', 'Contact', 'About', 'Rwanda', 'Average'],
+                                            ['Month', 'Slider', 'Service', 'Contact', 'About','q'],
 
-                                            ['data', <?php echo $getslider ?>, <?php echo $getservice ?>, <?php echo $getcontact ?>, <?php echo $getabout ?>, <?php echo $getcontact ?>, <?php echo $getcontact ?>],
+                                            ['data', <?php echo $getslider ?>, <?php echo $getservice ?>, <?php echo $getcontact ?>, <?php echo $getabout ?>, <?php echo $getabout ?>],
                                         ]);
 
                                         var options = {
