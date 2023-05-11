@@ -21,6 +21,8 @@ include "../settings/setting.php";
                                     $getservice = count($getservice);
                                     $getabout = count($getabout);
                                     $getslider = count($getslider);
+
+
                                 ?>
 
                                 <script type="text/javascript">
@@ -46,6 +48,10 @@ include "../settings/setting.php";
                             </form>
                             <div id="chart_div" style="width: auto; height: 500px;"></div>
                         </div>
+
+
+
+
                     </div>
                 </section>
             </div>
