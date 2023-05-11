@@ -9,7 +9,7 @@
             <div class="row d_flex">
                 <div class=" col-md-3 col-sm-3">
                     <div class="logo">
-                        <a href="index.html">Bliss</a>
+                        <a href="index.php">Bliss</a>
                     </div>
                 </div>
                 <div class="col-md-9 col-sm-9">
@@ -20,7 +20,7 @@
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="service.html">Service</a></li>
                                 <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact us</a></li>
+                                <li><a href="contact.php">Contact us</a></li>
                                 <li class="d_none"><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                                 <li class="d_none"><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                             </ul>

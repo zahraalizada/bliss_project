@@ -2,7 +2,10 @@
 
 include "functions.php";
 
-
+if (!isset($_SESSION['admin'])){
+    header("location: ../website/login.php");
+    exit();
+}
 if (isset($page)) {
 
     if ($page == "slider") {
