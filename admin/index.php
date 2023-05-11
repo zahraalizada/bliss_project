@@ -2,11 +2,6 @@
 $page = "index";
 include "../settings/setting.php";
 ?>
-<?php
-
-
-?>
-
 
 <!--main content start-->
 <input type="hidden" name="index">
@@ -26,6 +21,8 @@ include "../settings/setting.php";
                                     $getservice = count($getservice);
                                     $getabout = count($getabout);
                                     $getslider = count($getslider);
+
+
                                 ?>
 
                                 <script type="text/javascript">
@@ -35,9 +32,9 @@ include "../settings/setting.php";
                                     function drawVisualization() {
                                         var data = google.visualization.arrayToDataTable
                                         ([
-                                            ['Month', 'Slider', 'Service', 'Contact', 'About', 'Rwanda', 'Average'],
+                                            ['Month', 'Slider', 'Service', 'Contact', 'About','q'],
 
-                                            ['data', <?php echo $getslider ?>, <?php echo $getservice ?>, <?php echo $getcontact ?>, <?php echo $getabout ?>, <?php echo $getcontact ?>, <?php echo $getcontact ?>],
+                                            ['data', <?php echo $getslider ?>, <?php echo $getservice ?>, <?php echo $getcontact ?>, <?php echo $getabout ?>, <?php echo $getabout ?>],
                                         ]);
 
                                         var options = {
@@ -62,49 +59,25 @@ include "../settings/setting.php";
                                 </div>
                                 <div class="custom-bar-chart">
                                     <ul class="y-axis">
-                                        <li><span>10.000</span></li>
-                                        <li><span>8.000</span></li>
-                                        <li><span>6.000</span></li>
-                                        <li><span>4.000</span></li>
-                                        <li><span>2.000</span></li>
+                                        <li><span><?php echo $getslider ?></span></li>
+                                        <li><span><?php echo $getservice ?></span></li>
+<?php $num= 100 ; ?>
                                         <li><span>0</span></li>
                                     </ul>
                                     <div class="bar">
                                         <div class="title">JAN</div>
-                                        <div class="value tooltips" data-original-title="8.500" data-toggle="tooltip" data-placement="top">85%</div>
+                                        <div class="value tooltips" data-original-title="<?php echo $getslider ?>" data-toggle="tooltip" data-placement="top"></div>
                                     </div>
                                     <div class="bar ">
                                         <div class="title">FEB</div>
-                                        <div class="value tooltips" data-original-title="5.000" data-toggle="tooltip" data-placement="top">50%</div>
+                                        <div class="value tooltips" data-original-title="<?php echo $getservice ?>" data-toggle="tooltip" data-placement="top"></div>
                                     </div>
-                                    <div class="bar ">
-                                        <div class="title">MAR</div>
-                                        <div class="value tooltips" data-original-title="6.000" data-toggle="tooltip" data-placement="top">60%</div>
-                                    </div>
-                                    <div class="bar ">
-                                        <div class="title">APR</div>
-                                        <div class="value tooltips" data-original-title="4.500" data-toggle="tooltip" data-placement="top">45%</div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="title">MAY</div>
-                                        <div class="value tooltips" data-original-title="3.200" data-toggle="tooltip" data-placement="top">32%</div>
-                                    </div>
-                                    <div class="bar ">
-                                        <div class="title">JUN</div>
-                                        <div class="value tooltips" data-original-title="6.200" data-toggle="tooltip" data-placement="top">62%</div>
-                                    </div>
-                                    <div class="bar">
-                                        <div class="title">JUL</div>
-                                        <div class="value tooltips" data-original-title="7.500" data-toggle="tooltip" data-placement="top">75%</div>
-                                    </div>
+
                                 </div>
                                 <!--custom chart end-->
                             </div>
 
                         </div>
-
-
-
 
                     </div>
                 </section>

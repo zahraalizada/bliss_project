@@ -15,8 +15,12 @@ if (isset($_POST['update_service'])) {
     $image = getImage($_FILES['image']);
     $hidden_update_id = $_POST['hidden'];
     if ($_FILES['image']['name'] != '') {
+        echo 'if';
+        exit();
         getUpdate('service', ['title', 'content', 'image', 'slug', 'status', 'created_at'], [$_POST['title'], $_POST['content'], $image, $_POST['slug'], $_POST['status'], 1], $hidden_update_id);
     } else {
+  var_dump($image);
+
         getUpdate('service', ['title', 'content', 'status', 'slug', 'created_at'], [$_POST['title'], $_POST['content'], $_POST['slug'], $_POST['status'], 1], $hidden_update_id);
     }
     redirect('../admin/service.php');
@@ -181,6 +185,58 @@ if (isset($_POST['update_subscribe'])) {
 
     getUpdate('social', ['email'], [$_POST['email']], $hidden_update_id);
     redirect('../admin/subscribe.php');
+}
+
+///======LOGIN======
+if (isset($_POST['admin_login'])) {
+//    $data = getDataColumns('login_admin', ['password', 'user_name'], [$_POST['password'], $_POST['user_name']]);
+//    if ($data) {
+//        header("location: ../admin/index.php");
+//        exit();
+//    } else {
+//        header("location: ../admin/login.php");
+//        exit();
+//    }
+
+    $data = getData('login_admin');
+    $user_name = $data[0]['user_name'];
+    $password = $data[0]['password'];
+    if (empty($_POST['user_name']) || empty($_POST['password'])) {
+        echo 'Password ve ya User Name bos ola bilmez ';
+        header("location: ../website/login.php");
+        exit();
+    } elseif ($_POST['user_name'] === $user_name && $_POST['password'] === $password) {
+        header("location: ../admin/index.php");
+        exit();
+    }else{
+        echo 'Password ve ya User Name duzgun deil';
+        header("location: ../website/login.php");
+    }
+
+}
+
+///========PROFIL======
+ if (isset($_POST['add_profile'])) {
+    $image = getImage($_FILES['image']);
+    $data = getInsert('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image]);
+    redirect('../admin/profile.php');
+}
+if (isset($_GET['delete_profil_id'])) {
+    $getDelete = getDelete('login_admin', $_GET['delete_profil_id']);
+    redirect('../admin/profile.php');
+}
+if (isset($_POST['update_profil'])) {
+    $image = getImage($_FILES['image']);
+    $hidden_update_id = $_POST['hidden'];
+    if ($_FILES['image']['name'] != '') {
+
+        getUpdate('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image],$hidden_update_id);
+    } else {
+var_dump($image);
+exit();
+        getUpdate('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image],$hidden_update_id);
+    }
+    redirect('../admin/profile.php');
 }
 
 ?>
