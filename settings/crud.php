@@ -19,7 +19,7 @@ if (isset($_POST['update_service'])) {
         exit();
         getUpdate('service', ['title', 'content', 'image', 'slug', 'status', 'created_at'], [$_POST['title'], $_POST['content'], $image, $_POST['slug'], $_POST['status'], 1], $hidden_update_id);
     } else {
-  var_dump($image);
+        var_dump($image);
 
         getUpdate('service', ['title', 'content', 'status', 'slug', 'created_at'], [$_POST['title'], $_POST['content'], $_POST['slug'], $_POST['status'], 1], $hidden_update_id);
     }
@@ -36,7 +36,7 @@ if (isset($_GET['status_service_id'])) {
 //========about insert=====
 if (isset($_POST['add_about'])) {
     $image = getImage($_FILES['image']);
-    $data = getInsert('about', ['title', 'content', 'image', 'date', 'status'], [$_POST['title'], $_POST['content'], $image, $_POST['status'], 1]);
+    $data = getInsert('about', ['title', 'content', 'image', 'date', 'status'], [$_POST['title'], $_POST['content'], $image, $_POST['status'], date("Y/m/d")]);
     redirect('../admin/about.php');
 }
 if (isset($_GET['delete_about_id'])) {
@@ -47,9 +47,9 @@ if (isset($_POST['update_about'])) {
     $image = getImage($_FILES['image']);
     $hidden_update_id = $_POST['hidden'];
     if ($_FILES['image']['name'] != '') {
-        getUpdate('about', ['title', 'content', 'image', 'status', 'date'], [$_POST['title'], $_POST['content'], $image, $_POST['status'], 1], $hidden_update_id);
+        getUpdate('about', ['title', 'content', 'image', 'status', 'date'], [$_POST['title'], $_POST['content'], $image, $_POST['status'], date("Y/m/d")], $hidden_update_id);
     } else {
-        getUpdate('about', ['title', 'content', 'status', 'date'], [$_POST['title'], $_POST['content'], $_POST['status'], 1], $hidden_update_id);
+        getUpdate('about', ['title', 'content', 'status', 'date'], [$_POST['title'], $_POST['content'], $_POST['status'], date("Y/m/d")], $hidden_update_id);
     }
     redirect('../admin/about.php');
 }
@@ -57,13 +57,13 @@ if (isset($_POST['update_about'])) {
 
 if (isset($_POST['contact_send'])) {
 
-    $data = getInsert('contact', ['name', 'email', 'number', 'date', 'message', 'time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['time'],]);
+    $data = getInsert('contact', ['name', 'email', 'number', 'date', 'message', 'time'], [$_POST['name'], $_POST['email'], $_POST['number'], $_POST['date'], $_POST['message'], $_POST['time'],]);
     redirect('../website/index.php');
 }
 
 //====== contact insert========
 if (isset($_POST['add_contact'])) {
-    $data = getInsert('contact', ['name', 'email', 'number', 'date', 'message', 'status','time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'],$_POST['time'],]);
+    $data = getInsert('contact', ['name', 'email', 'number', 'date', 'message', 'status', 'time'], [$_POST['name'], $_POST['email'], $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'], $_POST['time'],]);
     redirect('../admin/contact.php');
 }
 if (isset($_GET['delete_contact_id'])) {
@@ -77,9 +77,9 @@ if (isset($_GET['status_contact_id'])) {
     getUpdate('contact', ['status'], [$status], $_GET['status_contact_id']);
     redirect('../admin/contact.php');
 }
-if (isset($_POST['update_contact'])){
+if (isset($_POST['update_contact'])) {
     $hidden_update_id = $_POST['hidden'];
-   getUpdate ('contact', ['name', 'email', 'number', 'date', 'message', 'status','time'], [$_POST['name'], $_POST['email'],  $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'],$_POST['time']], $hidden_update_id);
+    getUpdate('contact', ['name', 'email', 'number', 'date', 'message', 'status', 'time'], [$_POST['name'], $_POST['email'], $_POST['number'], $_POST['date'], $_POST['message'], $_POST['status'], $_POST['time']], $hidden_update_id);
     redirect('../admin/contact.php');
 
 }
@@ -156,11 +156,10 @@ if (isset($_GET['change_blog_status'])) {
 }
 
 
-
 // =========== SOCIAL ============
 // social insert
 if (isset($_POST['add_social'])) {
-    $data = getInsert('social', ['title','link','icon'], [$_POST['title'], $_POST['link'],$_POST['icon']]);
+    $data = getInsert('social', ['title', 'link', 'icon'], [$_POST['title'], $_POST['link'], $_POST['icon']]);
     redirect('../admin/social.php');
 }
 
@@ -174,7 +173,7 @@ if (isset($_GET['delete_social_id'])) {
 if (isset($_POST['update_social'])) {
     $hidden_update_id = $_POST['hdnid'];
 
-    getUpdate('social', ['title', 'link','icon'], [$_POST['title'], $_POST['link'], $_POST['icon']], $hidden_update_id);
+    getUpdate('social', ['title', 'link', 'icon'], [$_POST['title'], $_POST['link'], $_POST['icon']], $hidden_update_id);
     redirect('../admin/social.php');
 }
 
@@ -216,15 +215,14 @@ if (isset($_POST['admin_login'])) {
         $_SESSION['admin'] = $_POST['user_name'];
         header("location: ../admin/index.php");
         exit();
-    }else{
+    } else {
         echo 'Password ve ya User Name duzgun deil';
         header("location: ../website/login.php");
     }
-
 }
 
 ///========PROFIL======
- if (isset($_POST['add_profile'])) {
+if (isset($_POST['add_profile'])) {
     $image = getImage($_FILES['image']);
     $data = getInsert('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image]);
     redirect('../admin/profile.php');
@@ -238,13 +236,19 @@ if (isset($_POST['update_profil'])) {
     $hidden_update_id = $_POST['hidden'];
     if ($_FILES['image']['name'] != '') {
 
-        getUpdate('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image],$hidden_update_id);
+        getUpdate('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image], $hidden_update_id);
     } else {
-var_dump($image);
-exit();
-        getUpdate('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image],$hidden_update_id);
+        getUpdate('login_admin', ['user_name', 'password', 'image'], [$_POST['user_name'], $_POST['password'], $image], $hidden_update_id);
     }
     redirect('../admin/profile.php');
+}
+
+
+//===subscribe email send===
+if (isset($_POST['subscribe_send'])) {
+
+    $data = getInsert('subscribe', ['email'], [$_POST['email']]);
+    redirect('../website/index.php');
 }
 
 ?>

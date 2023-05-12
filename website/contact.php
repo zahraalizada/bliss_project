@@ -1,6 +1,4 @@
-<?php include 'header.php';
-include 'index_navigation.php';
-?>
+<?php include 'header.php'; ?>
 
       <!-- end banner -->
       <!-- appointment -->

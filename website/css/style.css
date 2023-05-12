@@ -1224,3 +1224,38 @@ ul.social_icon li a i:hover {
 .portfolio_page .footer {
     margin-top: 60px;
 }
+
+.img-box-slider{
+    display: inline-block !important;
+    width: 350px !important;
+    height: 330px !important;
+    overflow: hidden !important;
+    border-radius: 15px;
+}
+.img-box-service{
+    display: inline-block !important;
+    width: 350px !important;
+    height: 330px !important;
+    overflow: hidden !important;
+    border-radius: 15px;
+}
+.img-box-blog{
+    display: inline-block !important;
+    width: 340px !important;
+    height: 220px !important;
+    overflow: hidden !important;
+    border-radius: 15px;
+}
+.img-box-about{
+    display: inline-block !important;
+    width: 660px !important;
+    height: 500px !important;
+    overflow: hidden !important;
+    border-radius: 15px;
+}
+.img-box-slider img, .img-box-service img, .img-box-about img, .img-box-blog img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}

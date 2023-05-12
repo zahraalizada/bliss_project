@@ -1,6 +1,4 @@
-<?php
-include "../website/header.php";
-include '../website/index_navigation.php';?>
+<?php include "../website/header.php"; ?>
 <?php if (isset($_SESSION['admin'])){
     header("location: ../admin/index.php");
     exit();

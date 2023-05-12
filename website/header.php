@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
 
     <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="icon" href="images/fevicon.png" type="image/gif"/>
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
@@ -33,3 +33,40 @@
 </head>
 
 <body class="main-layout">
+
+
+<div class="loader_bg">
+    <div class="loader"><img src="images/loading.gif" alt="#"/></div>
+</div>
+<div class="full_bg">
+    <header class="header-area">
+        <div class="container">
+            <div class="row d_flex">
+                <div class=" col-md-3 col-sm-3">
+                    <div class="logo">
+                        <a href="index.php">Bliss</a>
+                    </div>
+                </div>
+                <div class="col-md-9 col-sm-9">
+                    <div class="navbar-area">
+                        <nav class="site-navbar">
+                            <ul>
+                                <li><a class="active" href="index.php">Home</a></li>
+                                <li><a href="about.php">About</a></li>
+                                <li><a href="service.php">Service</a></li>
+                                <li><a href="blog.php">Blog</a></li>
+                                <li><a href="contact.php">Contact us</a></li>
+                                <li class="d_none"><a href="login.php"><i class="fa fa-user" aria-hidden="true"></i></a>
+                                </li>
+
+                            </ul>
+                            <button class="nav-toggler">
+                                <span></span>
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+

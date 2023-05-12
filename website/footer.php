@@ -35,9 +35,9 @@
                         <div class="col-lg-6 col-md-12">
                             <div class="hedingh3  text_align_left">
                                 <h3>Newsletter</h3>
-                                <form id="colof" class="form_subscri">
-                                    <input class="newsl" placeholder="Email" type="text" name="Email">
-                                    <button class="subsci_btn">Subscribe</button>
+                                <form action="../settings/crud.php" method="post"  id="colof" class="form_subscri">
+                                    <input class="newsl" placeholder="Email" type="text" name="email">
+                                    <button class="subsci_btn" name="subscribe_send">Subscribe</button>
                                 </form>
                                 <ul class="top_infomation">
                                     <li><i class="fa fa-phone" aria-hidden="true"></i>
