@@ -1248,8 +1248,8 @@ ul.social_icon li a i:hover {
 }
 .img-box-about{
     display: inline-block !important;
-    width: 660px !important;
-    height: 500px !important;
+    max-width: 660px !important;
+    max-height: 500px !important;
     overflow: hidden !important;
     border-radius: 15px;
 }
